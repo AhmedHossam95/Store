@@ -1,0 +1,10 @@
+<nav class="flex content-center">
+  <mat-card class="margin-16 flex-1" [routerLink]="['products']">
+    <mat-card-content class="text-center"> List Products </mat-card-content>
+  </mat-card>
+  <mat-card class="margin-16 flex-1" [routerLink]="['products', 'add']">
+    <mat-card-content class="text-center"> Add a Product </mat-card-content>
+  </mat-card>
+</nav>
+
+<router-outlet></router-outlet>
