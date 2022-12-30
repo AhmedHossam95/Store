@@ -1,0 +1,25 @@
+mat-form-field {
+  width: 100%;
+}
+.save-btn {
+  margin: 0 auto;
+  width: 80%;
+  padding: 16px;
+  background-color: var(--primary-color);
+  border-radius: 5px;
+  color: whitesmoke;
+  cursor: pointer;
+  margin-bottom: 16px;
+}
+form {
+  text-align: center;
+}
+@media only screen and (min-width: 768px) {
+  mat-card {
+    width: 50%;
+    margin: 0 auto;
+  }
+  .save-btn {
+    width: 50%;
+  }
+}

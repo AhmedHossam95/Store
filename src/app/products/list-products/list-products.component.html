@@ -1,1 +1,8 @@
-<p>list-products works!</p>
+<section *ngIf="products.length > 0" class="grid-container">
+  <app-product
+    *ngFor="let product of products"
+    [product]="product"
+    class="grid-item"
+  >
+  </app-product>
+</section>

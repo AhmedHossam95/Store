@@ -9,15 +9,14 @@
     <h2 *ngIf="product.title" class="text-center margin-block-8">
       {{ product.title }}
     </h2>
-    <h4
-      *ngIf="product.description"
-      class="text-center grey-color margin-block-8"
-    >
-      {{ product.description }}
+    <h4 *ngIf="product.category" class="text-center grey-color margin-block-8">
+      {{ product.category }}
     </h4>
     <h1 *ngIf="product.price" class="text-center lg-font margin-block-8">
       {{ product.price | currency }}
     </h1>
-    <button class="details-btn">Add to cart</button>
+    <button class="details-btn" [routerLink]="[product.id]">
+      View Details
+    </button>
   </mat-card-content>
 </mat-card>

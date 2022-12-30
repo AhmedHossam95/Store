@@ -1,1 +1,37 @@
-<p>add-product works!</p>
+<mat-card class="margin-16">
+  <mat-card-content>
+    <form [formGroup]="productForm">
+      <mat-form-field appearance="fill">
+        <mat-label>Title</mat-label>
+        <input matInput formControlName="title" />
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Description</mat-label>
+        <input matInput formControlName="description" />
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Category</mat-label>
+        <input matInput formControlName="category" />
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Price</mat-label>
+        <input matInput formControlName="price" />
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Image</mat-label>
+        <input matInput formControlName="image" />
+      </mat-form-field>
+    </form>
+  </mat-card-content>
+  <mat-card-actions>
+    <button
+      mat-raised-button
+      color="primary"
+      class="save-btn"
+      [disabled]="!productForm.valid || isPending"
+      (click)="saveProduct()"
+    >
+      Add Product
+    </button>
+  </mat-card-actions>
+</mat-card>
